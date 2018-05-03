@@ -3,7 +3,7 @@
 
 
 
-//get request to Weather Underground API
+//STATE OBJECT
 function getApiData(searchTerm){
   $.getJSON("http://api.wunderground.com/api",
     {
@@ -13,7 +13,7 @@ function getApiData(searchTerm){
     displaySearchData);
 }
 
-//render results
+//STATE MODIFICATION
 function showResults(result){
   console.log(result)
   return `
@@ -25,14 +25,14 @@ function showResults(result){
   `
 }
 
-//display search results 
+//RENDERING
 function displaySearchData(data){
 //  console.log(data);
   const results = data.items.map((item, index) => showResults(item));
   $('.js-search-results').html(results);
 }
  
-//Get information from the user input form
+//EVENT LISTENERS
 function userSubmit(){
   $('.js-search-form').submit(event => {
     event.preventDefault();
