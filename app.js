@@ -4,11 +4,12 @@
 
 
 //STATE OBJECT
-function getApiData(searchTerm){
-  $.getJSON("http://api.wunderground.com/api",
+function getApiData(searchCity, searchState){
+  $.getJSON("http://api.wunderground.com/api/" + key + "/conditions/q/" + state + "/" + city + ".json",
     {
       key:'d64bfe6503177a15',
-      q: `${searchTerm}`,
+      city: `${searchCity}`,
+      state: `${searchState}`,
     }, 
     displaySearchData);
 }
@@ -18,7 +19,7 @@ function showResults(result){
   console.log(result)
   return `
     <div> +
-    '<h2 class="city-name">${result.city}</h2>' +
+    '<h2 class="city-name">${result.full}</h2>' +
     '<p>Current Temperature: <span class="current-temperature">${result.temperature_string}</span></p>' +
     '<p>Current Wind Conditions: <span class="current-wind-conditions">${result.wind_string}</span></p>' +
     </div>

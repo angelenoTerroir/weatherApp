@@ -1,3 +1,49 @@
+body{
+	font-family:sans-serif;
+	background color: #000;
+}
+
+main{
+	margin: 0 auto;
+}
+
+h1, h2, label{
+	color: #FFF;
+}
+
+h2, label{
+	font-weight: 400;
+}
+
+h1{
+	font-size: 32px;
+	font-weight: 700;
+}
+
+h2{
+	font-size: 24px;
+}
+
+label{
+	font-size: 16px;
+}
+
+.border{
+	border: 1px solid #000;
+	background-color: #999;
+	width: 20%;
+	padding: 20px;
+}
+
+.state-input{
+	padding: 12px 0px;
+}
+
+label, input, button{
+	margin: 5px 0px;
+}
+
+
 .grid_1,
 .grid_2,
 .grid_3,
